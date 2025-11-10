@@ -22,8 +22,7 @@ Launches the test runner in interactive watch mode.
 Storybook is used to document and develop components in isolation. It provides a visual interface to test different states and scenarios of the components.
 
 To start Storybook, run:
-```bash
-npm run storybook
+`npm run storybook`
 
 Grid Board
 
