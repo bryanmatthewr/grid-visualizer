@@ -2,7 +2,7 @@
 
 Grid Visualizer is a React application that visualizes the placement of an object on a 5x5 grid. The position and direction of the object are determined by an input string in the format "x,y direction" (e.g., "1,1 NORTH"). The project uses Material UI for the user interface and Storybook for component documentation and development.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Available Scripts
 
@@ -26,12 +26,12 @@ To start Storybook, run:
 
 Grid Board
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Grid Object
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Grid Position Form
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
