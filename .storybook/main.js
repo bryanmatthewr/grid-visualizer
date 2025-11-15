@@ -1,17 +1,19 @@
 
 
-/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+/** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   "stories": [
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [
-    "@storybook/addon-webpack5-compiler-swc",
-    "@storybook/addon-docs"
+    "@chromatic-com/storybook",
+    "@storybook/addon-docs",
+    "@storybook/addon-a11y",
+    "@storybook/addon-vitest"
   ],
   "framework": {
-    "name": "@storybook/react-webpack5",
+    "name": "@storybook/react-vite",
     "options": {}
   }
 };
