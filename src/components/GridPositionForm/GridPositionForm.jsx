@@ -11,22 +11,23 @@ export default function GridPositionForm({
     // Initialize errors state based on default value
     const [errors, setErrors] = useState(parsePosition(defaultValue).errors);
 
-    // Initialize with default value and call onSubmit
-    React.useLayoutEffect(() => {
-        const { parsed } = parsePosition(defaultValue);
-        if (parsed) {
-            onSubmit(parsed);
-        }
-    }, [defaultValue, onSubmit]);
-
     const handleSubmit = useCallback(() => {
         const trimmed = inputValue.trim();
         const { parsed, errors } = parsePosition(trimmed);
         setErrors(errors);
-        if (parsed) {
-            onSubmit(parsed);
-        }
+        onSubmit(parsed);
     }, [inputValue, onSubmit]);
+
+    // Initialize with default value and call onSubmit
+    React.useLayoutEffect(() => {
+        handleSubmit();
+    }, [defaultValue, onSubmit]);
+
+    // const handleClear = useCallback(() => {
+    //     setInputValue("");
+    //     setErrors([]);
+    //     onSubmit("");
+    // }, [inputValue, onSubmit]);
 
     return (
         <Box sx={{ mb: 4 }}>
@@ -86,6 +87,14 @@ export default function GridPositionForm({
                 >
                     Visualize
                 </Button>
+
+                {/* <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{ height: "40px" }}
+                    onClick={handleClear}>
+                    Reset
+                </Button> */}
             </Stack>
         </Box>
     );
