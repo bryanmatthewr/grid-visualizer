@@ -21,7 +21,9 @@ export default function GridPositionForm({
     // Initialize with default value and call onSubmit
     React.useLayoutEffect(() => {
         handleSubmit();
-    }, [defaultValue, onSubmit]);
+        // Intentionally run this ONLY on mount.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // const handleClear = useCallback(() => {
     //     setInputValue("");
